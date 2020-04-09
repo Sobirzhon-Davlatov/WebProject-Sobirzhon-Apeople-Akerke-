@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { products,Product } from '../products';
 import { CartService } from '../cart.service';
 import {ProductService} from '../product.service';
+import { OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
@@ -16,7 +18,8 @@ export class ProductDetailComponent {
   constructor(
       private route: ActivatedRoute,
       private productService: ProductService,
-      private cartService: CartService
+      private cartService: CartService,
+      private location: Location
     ) { }
     ngOnInit() {
         this.getProduct();
@@ -30,7 +33,17 @@ export class ProductDetailComponent {
       this.cartService.addToCart(product);
       window.alert('Your product has been added to the cart!');
     }
+  
+
+// share(product:Product):void {
+//      window.alert(`The ${product.name} has been shared!`);
+
+//   }
+
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+  goBack(): void {
+    this.location.back();
   }
 }

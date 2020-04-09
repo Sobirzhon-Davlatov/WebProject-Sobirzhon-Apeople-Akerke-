@@ -13,8 +13,8 @@ export class CategoryService {
  
   constructor() { }
 
-  getCategory(id: number): Observable<Category[]> {
-    return of(categories.find(categories => categories.id === id));
+  getCategory(id: number): Observable<any> {
+    return of(categories.find(category => category.id === id));
   }
 
   getCategories(): Observable<any> {

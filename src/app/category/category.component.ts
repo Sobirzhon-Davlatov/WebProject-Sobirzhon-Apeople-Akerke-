@@ -10,8 +10,7 @@ import {CategoryService} from '../category.service';
 })
 export class CategoryComponent implements OnInit {
   products: any;
-  // category: Categories[];
-  categories:Category[];
+  category: any;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -36,7 +35,7 @@ export class CategoryComponent implements OnInit {
 
   getCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.categoryService.getCategory(id).subscribe(categories => this.categories = categories);
+    this.categoryService.getCategory(id).subscribe(category => this.category = category);
   }
 
 }
