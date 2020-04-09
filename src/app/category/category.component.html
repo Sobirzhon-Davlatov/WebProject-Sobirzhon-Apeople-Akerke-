@@ -1,29 +1,21 @@
 
 
-<h2>{{category.name}}</h2>
+<h2 style= "font-size:60px;color: blue; text-align: center;">{{category.category}}</h2>
+<hr>
+<div class="products">
+  <div class="product-detail" *ngFor="let product of products">
+    <div class="polaroid">
 
-<div *ngFor="let product of products">
-   
-  
-  <div class="polaroid">
     <img src="{{product.image}}" width="150" height="200">
-
-    <div class="container">
-      <h3 style="font-size: 25px;">
+      <h4>
         <a routerLink="/products/{{product.id}}" [title]="product.name + ' details'">
           {{ product.name }}
         </a>
-      </h3>
-      <p *ngIf="product.description" style="font-size: 25px;">
-        Description: {{ product.description }}
-      </p>
+      </h4>
     
-      <p *ngIf="product.price" style="font-size: 25px;">
+      <h4 *ngIf="product.price" style="font-size: 25px;">
         Price: {{ product.price }}
-      </p>
-      <p *ngIf="product.rating" style="font-size: 25px;">
-        Rating: {{ product.rating }}
-      </p>
+      </h4>
     </div>
   </div>
 

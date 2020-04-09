@@ -30,13 +30,6 @@ export class ProductDetailComponent {
       this.cartService.addToCart(product);
       window.alert('Your product has been added to the cart!');
     }
-  
-
-// share(product:Product):void {
-//      window.alert(`The ${product.name} has been shared!`);
-
-//   }
-
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }

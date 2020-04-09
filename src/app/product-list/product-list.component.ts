@@ -19,7 +19,6 @@ export class ProductListComponent implements OnInit {
   }
 
   getProducts() {
-    // tslint:disable-next-line:no-shadowed-variable
     this.productService.getProducts().subscribe(products => this.products = products);
   }
 

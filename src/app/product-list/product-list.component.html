@@ -1,57 +1,10 @@
 <h1 style="color: blue;text-align: center;">Products</h1>
-
-<!-- <div class="flex-container"> -->
-<!-- <div *ngFor="let product of products">
-   
-  
-  <div class="container">
-    <img src="{{product.image}}" style="width: 100%;" height="500">
-    <div class="text-block">
-      <h3 style="font-size: 25px;">
-        <a href="{{product.link}}">
-          {{ product.name }}
-        </a>
-      </h3>
-      
-    </div> -->
-      
-      <!-- <p *ngIf="product.description" style="font-size: 25px;">
-        Description: {{ product.description }}
-      </p> -->
-    
-      <!-- <p *ngIf="product.price" style="font-size: 25px;">
-        Price: {{ product.price }}
-      </p>
-      <p *ngIf="product.rating" style="font-size: 25px;">
-        Rating: {{ product.rating }}
-      </p> -->
-      
-    <!-- </div> -->
-    <!-- <button>
-      <a href="https://api.whatsapp.com/send?phone=77075145613&text=Look+at+this+product+{{product.name}}+here+{{product.link}}">Share with Whatsapp</a>
-    </button> -->
-  <!-- </div> -->
-  
-    <!-- <div *ngFor="let product of products">
-      <div class="wrapper">
-    <div class="box">
-      <div>
-      <img src="{{product.image}}" style="width: 100%;" height="500">
-      <h3 style="font-size: 25px;">
-        <a href="{{product.link}}">
-          {{ product.name }}
-        </a>
-      </h3>
-      </div>
-    </div>
-    
-  </div>
-  </div> -->
+<hr>
   <div class="products">
-    <div class="product-item" *ngFor="let product of products">
+    <div class="product-detail" *ngFor="let product of products">
       <div class="polaroid">
   
-        <img src="{{product.image}}" width="150" height="200">
+        <img src="{{product.image}}" width="150" height="200" style="display: block;">
       <h4>
         
         <a routerLink="/products/{{product.id}}" [title]="product.name + ' details'" >
